@@ -15,11 +15,10 @@ function AllMeetupsPage() {
       .then((data) => {
         const meetups = [];
         for (const key in data) {
-          const meetup = {
+          meetups.push({
             id: key,
             ...data[key],
-          };
-          meetups.push(meetup);
+          });
         }
 
         setIsLoading(false);
