@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from "react-dom";
+
 import MeetupList from "../components/meetups/MeetupList";
 
 function AllMeetupsPage() {
@@ -12,7 +12,7 @@ function AllMeetupsPage() {
       "https://react-meetup-app-a62f6-default-rtdb.europe-west1.firebasedatabase.app/meetups.json"
     )
       .then((response) => response.json())
-      .then(data => {
+      .then((data) => {
         const meetups = [];
         for (const key in data) {
           const meetup = {
